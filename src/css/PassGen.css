@@ -1,0 +1,50 @@
+.container_generator {
+    background-color: lightskyblue;
+    border-radius: 1rem;
+    padding: 20px 40px;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_generator .Tittle,
+.container_generator .pass_contain,
+.container_generator .range_contain,
+.container_generator .checked_contain,
+.container_generator .btn_Generator {
+    padding: 20px 20px;
+}
+
+
+.container_generator .pass_contain {
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    justify-content: center;
+}
+
+.container_generator .pass_contain input,
+.container_generator .pass_contain button{
+    padding: 10px 20px;
+}
+
+.container_generator .range_contain{
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container_generator .range_contain input{
+    margin-top: 20px;
+}
+
+.container_generator .checked_contain{
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_generator .checked_contain label{
+    margin-top: 20px;
+}
