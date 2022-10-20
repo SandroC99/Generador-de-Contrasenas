@@ -1,0 +1,1 @@
+le añadi redux la primera vez lo hice solo con useState's 
