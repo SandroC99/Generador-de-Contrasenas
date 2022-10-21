@@ -2,49 +2,129 @@
     background-color: lightskyblue;
     border-radius: 1rem;
     padding: 20px 40px;
-    width: 600px;
+    width: 650px;
     margin: auto;
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .container_generator .Tittle,
 .container_generator .pass_contain,
 .container_generator .range_contain,
 .container_generator .checked_contain,
-.container_generator .btn_Generator {
+.container_generator .btn_Generator,
+.container_generator .strong_contain {
     padding: 20px 20px;
 }
 
+.container_generator h1 {
+    background-color: white;
+    text-align: center;
+    color: #1b1b23;
+}
 
 .container_generator .pass_contain {
-    background-color: lightgoldenrodyellow;
+    background-color: lightgreen;
     display: flex;
     justify-content: center;
 }
 
 .container_generator .pass_contain input,
-.container_generator .pass_contain button{
-    padding: 10px 20px;
+.container_generator .pass_contain button {
+    padding: .5vw 1vw;
+    font-size: calc(1rem + .3vw);
 }
 
-.container_generator .range_contain{
-    background-color: lightgreen;
+.container_generator .pass_contain input{
+    width: 70%;
+    outline: none;
+    user-select: none;
+}
+.container_generator .pass_contain button {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.container_generator .range_contain {
+    background-color: lightgoldenrodyellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.container_generator .range_contain input{
+.container_generator .range_contain input {
     margin-top: 20px;
 }
 
-.container_generator .checked_contain{
-    background-color: lightcoral;
+.container_generator .checked_contain {
+    background-color: rgb(255, 197, 89);
     display: flex;
     flex-direction: column;
 }
 
-.container_generator .checked_contain label{
+.container_generator .checked_contain label {
     margin-top: 20px;
+}
+
+.container_generator .strong_contain {
+    background-color: lightcyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_generator .strong_contain .box_contain {
+    width: 150px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container_generator .strong_contain .box_contain div {
+    background-color: white;
+    width: 20px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+.container_generator .strong_contain .box_contain.Debil div:nth-child(1) {
+    background-color: red;
+}
+
+.container_generator .strong_contain .box_contain.Medio div:nth-child(1),
+.container_generator .strong_contain .box_contain.Medio div:nth-child(2) {
+    background-color: orangered;
+}
+
+.container_generator .strong_contain .box_contain.Fuerte div:nth-child(1),
+.container_generator .strong_contain .box_contain.Fuerte div:nth-child(2),
+.container_generator .strong_contain .box_contain.Fuerte div:nth-child(3) {
+    background-color: yellow;
+}
+
+.container_generator .strong_contain .box_contain.MuyFuerte div:nth-child(1),
+.container_generator .strong_contain .box_contain.MuyFuerte div:nth-child(2),
+.container_generator .strong_contain .box_contain.MuyFuerte div:nth-child(3),
+.container_generator .strong_contain .box_contain.MuyFuerte div:nth-child(4) {
+    background-color: yellowgreen;
+}
+
+.container_generator .btn_Generator{
+    border: none;
+    font-size: calc(1rem + .3vw);
+    background-color: #1b1b23;
+    color: white;
+}
+
+.container_generator .btn_Generator:hover{
+    background-color: purple;
+
+}
+
+@media screen and (max-width:874px) {
+    .container_generator{
+        width: 90%;
+    }
 }

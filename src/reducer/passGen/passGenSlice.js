@@ -1,20 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { generatePass } from '../../app/pass';
 
+const iniCheck = {
+	lower: true,
+	upper: true,
+	number: false,
+	special: false,
+};
+
 const ini = () => {
 	const valor = localStorage.getItem('values_passGen');
 	if (valor) {
 		return JSON.parse(valor);
 	}
 	return {
-		password: '',
+		password: generatePass(20, iniCheck),
 		range: 20,
-		checked: {
-			lower: true,
-			upper: true,
-			number: false,
-			special: false,
-		},
+		checked: iniCheck,
 	};
 };
 

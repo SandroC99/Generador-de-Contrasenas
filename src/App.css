@@ -1,23 +1,41 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Mono:wght@200;500&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-weight: bold;
 }
 
-body{
+body {
     background-color: #1b1b23;
 }
 
-.App{
+.App {
     background-color: white;
     width: 800px;
     margin: auto;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-button{
+button {
     cursor: pointer;
+    background-color: white;
+    transition: all .3s;
+}
+
+button:hover {
+    background-color: rgb(237, 237, 237);
+}
+
+@media screen and (max-width:874px) {
+    .App {
+        width: 90%;
+    }
 }
