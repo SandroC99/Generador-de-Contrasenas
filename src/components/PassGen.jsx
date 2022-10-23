@@ -50,7 +50,7 @@ export const PassGen = () => {
 		e.preventDefault();
 		navigator.clipboard.writeText(state.password);
 		console.log('Contraseña copiada');
-		alert('Contraseña copiada')
+		alert('Contraseña copiada');
 	};
 	const HANDLE_RANGE = (e) => {
 		dispatch(UPD_RANGE(e.target.value));
@@ -62,6 +62,12 @@ export const PassGen = () => {
 	};
 	const BUTTON_GENERATOR = (e) => {
 		e.preventDefault();
+
+		if (Boolean(Object.values(state.checked).find(el=>el==true)) === false) {
+			alert('Seleccione una casilla');
+			return;
+		}
+
 		dispatch(P_GENERATE());
 		console.log('Contraseña generada');
 	};
@@ -84,8 +90,8 @@ export const PassGen = () => {
 						type='range'
 						name=''
 						id=''
-						min={8}
-						max={20}
+						min={4}
+						max={15}
 						value={Number(state.range)}
 					/>
 				</div>
